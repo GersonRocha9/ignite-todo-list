@@ -10,8 +10,6 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   gap: 8px;
-  color: ${({ theme }) => theme.colors.base.gray[100]};
-  font-weight: 700;
   transition: background-color 0.2s;
 
   &:hover {
