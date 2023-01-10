@@ -11,3 +11,11 @@ export const FormContainer = styled.div`
   gap: 8px;
   paddind: 0 16px !important;
 `;
+
+export const TasksContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+`;
