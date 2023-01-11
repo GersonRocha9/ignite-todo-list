@@ -28,6 +28,23 @@ export const InfoWrapper = styled.div`
   max-width: 819px;
 `;
 
+export const InfoWrapperInfo = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+`;
+
+export const Badge = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: ${({ theme }) => theme.colors.base.gray[400]};
+  padding: 2px 8px;
+  border-radius: 999px;
+`;
+
 export const TasksContainer = styled.div`
   display: flex;
   flex-direction: column;

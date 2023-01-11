@@ -2,10 +2,12 @@ import { useState } from "react";
 import { CreateButton, Header, TaskCard, TextInput } from "../../components";
 import { Text } from "../../components/Text";
 import {
+  Badge,
   Container,
   FormContainer,
   InfoContainer,
   InfoWrapper,
+  InfoWrapperInfo,
   TasksContainer,
 } from "./styled";
 
@@ -59,14 +61,27 @@ export const Home = () => {
 
       <InfoContainer>
         <InfoWrapper>
-          <Text size={14} weight="bold" color="#4EA8DE">
-            Tarefas criadas {tasks.length}
-          </Text>
+          <InfoWrapperInfo>
+            <Text size={14} weight="bold" color="#4EA8DE">
+              Tarefas criadas
+            </Text>
+            <Badge>
+              <Text size={14} weight="bold" color="#4EA8DE">
+                {tasks.length}
+              </Text>
+            </Badge>
+          </InfoWrapperInfo>
 
-          <Text size={14} weight="bold" color="#8284FA">
-            Concluídas {tasks.filter((task) => task.isDone).length} de
-            {tasks.length}
-          </Text>
+          <InfoWrapperInfo>
+            <Text size={14} weight="bold" color="#8284FA">
+              Concluídas
+            </Text>
+            <Badge>
+              <Text size={14} weight="bold" color="#8284FA">
+                {tasks.filter((task) => task.isDone).length} de {tasks.length}
+              </Text>
+            </Badge>
+          </InfoWrapperInfo>
         </InfoWrapper>
       </InfoContainer>
 
