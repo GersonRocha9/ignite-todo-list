@@ -1,3 +1,6 @@
+import { Trash } from "phosphor-react";
+import { CardContainer, Container } from "./styles";
+
 interface Task {
   id: string;
   title: string;
@@ -6,15 +9,29 @@ interface Task {
 
 interface TaskCardProps {
   task: Task;
+  onDeleteTask: (id: string) => void;
+  onToggleTask: (id: string) => void;
 }
 
-export const TaskCard = ({ task }: TaskCardProps) => {
+export const TaskCard = ({
+  task,
+  onDeleteTask,
+  onToggleTask,
+}: TaskCardProps) => {
   return (
-    <div>
-      <div>
-        <input type="checkbox" checked={task.isDone} />
+    <Container>
+      <CardContainer isDone={task.isDone}>
+        <input
+          type="checkbox"
+          checked={task.isDone}
+          onChange={() => onToggleTask(task.id)}
+        />
+
         <span>{task.title}</span>
-      </div>
-    </div>
+        <button onClick={() => onDeleteTask(task.id)}>
+          <Trash size={16} color="#808080" />
+        </button>
+      </CardContainer>
+    </Container>
   );
 };

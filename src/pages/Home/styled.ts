@@ -12,6 +12,22 @@ export const FormContainer = styled.div`
   paddind: 0 16px !important;
 `;
 
+export const InfoContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+  padding: 0 16px !important;
+`;
+
+export const InfoWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 819px;
+`;
+
 export const TasksContainer = styled.div`
   display: flex;
   flex-direction: column;

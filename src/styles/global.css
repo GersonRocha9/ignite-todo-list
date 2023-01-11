@@ -3,8 +3,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: inherit;
 }
 
 body {
   background-color: #1a1a1a;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
 }
