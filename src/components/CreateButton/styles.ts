@@ -12,6 +12,11 @@ export const Button = styled.button`
   gap: 8px;
   transition: background-color 0.2s;
 
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
   &:hover {
     background-color: ${({ theme }) => theme.colors.blue.default};
   }

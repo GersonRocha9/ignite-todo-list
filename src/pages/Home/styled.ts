@@ -52,3 +52,11 @@ export const TasksContainer = styled.div`
   align-items: center;
   margin-top: 16px;
 `;
+
+export const Divider = styled.div`
+  width: 100%;
+  max-width: 819px;
+  height: 1px;
+  background: ${({ theme }) => theme.colors.base.gray[400]};
+  margin: 16px 0;
+`;

@@ -4,11 +4,12 @@ import { Button } from "./styles";
 
 interface CreateButtonProps {
   onAddTask: () => void;
+  disabled?: boolean;
 }
 
-export const CreateButton = ({ onAddTask }: CreateButtonProps) => {
+export const CreateButton = ({ onAddTask, disabled }: CreateButtonProps) => {
   return (
-    <Button onClick={onAddTask}>
+    <Button onClick={onAddTask} disabled={disabled}>
       <Text weight="bold" size={14} color="#F2F2F2">
         Criar
       </Text>
